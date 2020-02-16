@@ -1,0 +1,35 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" type="text/css" href= "{% static 'myapi/style.css' %}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>Home</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1>   
+            <a href="{% url 'list' %}">
+                <i class="fas fa-book-open"></i> Sub
+                <span class="text-primary">
+                    Scene
+                </span>
+            </a>        
+        </h1>
+    
+
+    <ul>
+        <li><a  href="{% url 'list' %}">Home</a></li>
+        <li><a href="#home">Favourites</a></li>
+        <li><a class="selected" href="#home">Profile</a></li>
+        <li><a href="#home">Logout</a></li>
+    </ul>
+
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

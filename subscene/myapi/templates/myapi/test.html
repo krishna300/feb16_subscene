@@ -1,0 +1,47 @@
+
+
+{% extends 'myapi/base.html' %}
+
+{% block content %}
+
+
+<div class="split">
+    <div class="left">
+        <div class="detail-image" 
+        style="background: url('{{post.image.url}}') no-repeat top center/cover ;" >
+        </div>
+        
+        <h1>{{post.title}}</h1>
+        <h4>
+            {{post.author}}
+
+            <!-- {{length1}} -->
+        </h4>
+    </div>
+    <div class="right">
+        {% for data,index in mapped %}
+
+            
+                <div class="dialog">
+                    <span>
+                        {% for j in data %}
+                        {{j}}
+                        {% endfor %}
+                    </span>
+                    <span class="counter">
+                        {{index}}
+                    </span>
+                </div>
+            
+
+
+        {% endfor %}
+            
+    </div>
+
+</div>
+
+
+
+
+{% endblock content  %}
